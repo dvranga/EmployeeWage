@@ -1,16 +1,24 @@
 public class EmployeeWage
 {
 	public static void main(String[] args) {
-		int FullTime=1;
-		double value= Math.floor(Math.random()*10)%2;
-		if(value==FullTime)
+		int FULL_TIME=1;
+		int PART_TIME=0;
+		int EMP_RATE_PER_HOUR=20;
+		int empHrs=0;
+		int empWage=0;
+		double value= Math.floor(Math.random()*10)%3;
+		if(value==FULL_TIME)
 		{
-			System.out.println("employee is present");
+			empHrs=8;
+		}
+		else if(value==PART_TIME)
+		{
+			empHrs=4;
 		}
 		else
-		{
-			System.out.println("employee is Absent");
-		}
+			empHrs=0;
+		empWage=empHrs*EMP_RATE_PER_HOUR;
+		System.out.println(empWage);
 	}
 }
 
